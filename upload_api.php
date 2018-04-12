@@ -17,32 +17,32 @@ if (isset($_POST) && count($_POST) != 0) {
 
         $guid = uniqid();
         $sql = "INSERT into tbContent (title, description, content_url, content_type, author) values ('$guid', '{$_POST['content']}', 'upload/{$_FILES['file_upload']['name']}', 'photo', {$_POST['author']});";
-        echo $sql;
+        //echo $sql;
         $result = $conn->query($sql);
         if ($result) {
-            echo 'Povedlo se';
+            //echo 'Povedlo se';
             header("location: index.php?uploaded=true");
         }
         else {
-            echo 'Nepovedlo se';
-            echo $conn->error;
+            //echo 'Nepovedlo se';
+            //echo $conn->error;
         }
         $row = $result->fetch_assoc();
-        var_dump($row);
+        //var_dump($row);
 
 
     } else {
-        echo 'je to jenom text';
+        //echo 'je to jenom text';
         $guid = uniqid();
         $sql = "INSERT into tbContent (title, description, content_url, content_type, author) values ('$guid', '{$_POST['content']}', '', 'text', {$_POST['author']});";
-        echo $sql;
+        //echo $sql;
         $result = $conn->query($sql);
         if ($result) {
-            echo 'Povedlo se';
+            //echo 'Povedlo se';
             header("location: index.php?uploaded=true");
         }
         else {
-            echo 'Nepovedlo se';
+            //echo 'Nepovedlo se';
             echo $conn->error;
         }
         /*

@@ -68,7 +68,7 @@ require ('partials/nav.php');
                 <div class="card-body">
                     <? if ($row['content_type'] == "photo") {
 
-                        echo '<img class="img img-fluid mx-auto d-block" style="padding-bottom: 1em;" src="http://localhost/'.$row['content_url'].'" alt="http://localhost/'.$row['content_url'].'">';
+                        echo '<img class="img img-fluid mx-auto d-block" style="padding-bottom: 1em;" src="'.$row['content_url'].'" alt="'.$row['content_url'].'">';
 
                     } ?>
                     <?php
