@@ -46,7 +46,7 @@ require ('partials/nav.php');
                                 <div class="col-md-3">
                                     <a id="send" class="btn btn-dark w-100 py-1" style="color: white !important;">Odeslat váš názor</a>
                                     <label class="btn btn-dark w-100 py-1" style="margin-top: 1em;">
-                                        Přidat fotku <input name="file_upload" onchange="preview_image(event)" id="file" type="file" hidden>
+                                        Přidat soubor <input name="file_upload" onchange="preview_image(event)" id="file" type="file" hidden>
                                     </label>
                                 </div>
                         </div>
@@ -58,19 +58,52 @@ require ('partials/nav.php');
             <?php
             $result = $conn->query('select * from tbContent ORDER BY id desc');
 
-
+            $count = 0;
             while ($row = $result->fetch_assoc()) {
+            $count++;
+
+            if ($count == 5)
+            {
+                $count = 0;
+                ?>
+
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-format="fluid"
+                     data-ad-layout-key="-6t+ed+2i-1n-4w"
+                     data-ad-client="ca-pub-5036777483973833"
+                     data-ad-slot="3703070085"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+
+                <?
+            }
 
             ?>
 
             <div class="card m-4">
 
                 <div class="card-body">
-                    <? if ($row['content_type'] == "photo") {
 
-                        echo '<img class="img img-fluid mx-auto d-block" style="padding-bottom: 1em;" src="'.$row['content_url'].'" alt="'.$row['content_url'].'">';
+                        <?
+                        if ($row['content_type'] == "photo") {
+                            echo '<div class="embed-responsive embed-responsive-4by3">';
+                                echo '<img class="embed-responsive-item img img-fluid mx-auto d-block" style="padding-bottom: 1em;" src="'.$row['content_url'].'" alt="'.$row['content_url'].'">';
+                            echo '</div>';
+                        }
+                        else if ($row['content_type'] == "video") {
+                            echo '<div class="embed-responsive embed-responsive-4by3">';
+                                echo '<video class="embed-responsive-item" controls>';
+                                    echo    '<source type="video/mp4" src="'.$row['content_url'].'">';
+                                echo '</video>';
+                            echo '</div>';
+                        }
+                        ?>
 
-                    } ?>
+
                     <?php
                         $size = 7;
                         if (strlen($row['description']) < 50) {
@@ -102,7 +135,16 @@ require ('partials/nav.php');
 
             <div class="card py-4 advert">
                 <div class="card-body">
-                    Tady se budou zobrazovat reklamy tvé sociální sítě
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- banner-na-pravo -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-5036777483973833"
+                         data-ad-slot="2553995168"
+                         data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
             </div>
             <?php

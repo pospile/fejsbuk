@@ -1,6 +1,7 @@
 <?php
 
 require('partials/db.php');
+require("partials/Security.php");
 session_start();
 
 
@@ -12,9 +13,11 @@ if (isset($_POST)){
 
 
     if ($type == "register") {
-        $stmt = $conn->prepare("INSERT INTO tbUser (display_name, user, pass) VALUES (?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO tbUser (display_name, user, pass, ad_id) VALUES (?, ?, ?, ?)");
         $hash = hash('sha256', $pass);
-        $stmt->bind_param('sss', $name, $user, $hash);
+        $security = new Security();
+        $uuid = $security->UUID();
+        $stmt->bind_param('ssss', $name, $user, $hash, $uuid);
         /* execute query */
         $stmt->execute();
         /* bind result variables */

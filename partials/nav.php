@@ -12,7 +12,7 @@
                     <a class="nav-link" href="index.php"><i class="fa fa-align-justify"></i> Zeď</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-users"></i> Přátelé</a>
+                    <a class="nav-link" href="friends.php"><i class="fa fa-users"></i> Přátelé</a>
                 </li>
                 <li class="nav-item">
                 <li class="dropdown">
