@@ -20,7 +20,8 @@
                         <i class="fa fa-bell"></i> Upozornění
                     </a>
                     <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
-                        <div class="py-5">Žádná upozornění</div>
+                        <div class="py-5">
+                        </div>
                     </div>
                 </li>
                 </li>

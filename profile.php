@@ -30,6 +30,12 @@ require('partials/nav.php');
                                         <a href="update_ad_id.php" class="btn btn-sm btn-warning float-right text-white">Resetovat reklamní id</a>
                                     </div>
                                 </div>
+                                <br>
+                                <!-- JuicyAds v3.0 -->
+                                <script type="text/javascript" data-cfasync="false" async src="//adserver.juicyads.com/js/jads.js"></script>
+                                <ins id="670162" data-width="728" data-height="102"></ins>
+                                <script type="text/javascript" data-cfasync="false" async>(adsbyjuicy = window.adsbyjuicy || []).push({'adzone':670162});</script>
+                                <!--JuicyAds END-->
                             </div>
                             <div class="col-md-6">
                                 <div class="card py-1">
@@ -51,19 +57,14 @@ require('partials/nav.php');
             </div>
 
             <div class="col-md-4">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- banner-na-pravo -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-5036777483973833"
-                     data-ad-slot="2553995168"
-                     data-ad-format="auto"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
                 <div class="card">
                     <div class="card-body">
                         <small>Je morální zobrazovat reklamy u vašich osobních údajů? Zeptejte se: <a href="//facebook.com" target="_blank">zde</a> </small>
+                        <!-- JuicyAds v3.0 -->
+                        <script type="text/javascript" data-cfasync="false" async src="//adserver.juicyads.com/js/jads.js"></script>
+                        <ins id="670159" data-width="774" data-height="302"></ins>
+                        <script type="text/javascript" data-cfasync="false" async>(adsbyjuicy = window.adsbyjuicy || []).push({'adzone':670159});</script>
+                        <!--JuicyAds END-->
                     </div>
                 </div>
             </div>

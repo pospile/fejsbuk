@@ -37,8 +37,15 @@ require('partials/header.php');
                                         </label>
                                     </div>
 
+
+                                    <script src="https://authedmine.com/lib/captcha.min.js" async></script>
+                                    <div class="coinhive-captcha w-100" data-hashes="1024" data-key="om5FLZQaWDRypRjGuavvpahd0ty508We" data-disable-elements="#submit">
+                                        <em>Loading Captcha...<br>
+                                            If it doesn't load, please disable Adblock!</em>
+                                    </div>
+
                                     <div class="form-group no-margin">
-                                        <button type="submit" class="btn btn-primary btn-block">
+                                        <button id="submit" type="submit" class="btn btn-primary btn-block">
                                             Register
                                         </button>
                                     </div>
